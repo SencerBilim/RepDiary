@@ -1,0 +1,34 @@
+
+
+{
+    "heroText": "DON'T WAIT GET IN",
+    "heroHeader": "SHAPE TODAY",
+    "loginHeader": "Log in",
+    "emailLabel": "Email:",
+    "passwordLabel": "Password:",
+    "loginButton": "Log in",
+    "error": "Error",
+    "signUp": "Sign up",
+    "Workout Days": "Workout Days",
+    "All Days": "All Days",
+    "No workouts found": "No workouts found",
+    "No workouts found for {{day}}": "No workouts found for {{day}}",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "Add a New Workout": "Add a New Workout",
+    "Select Day": "Select Day:",
+    "Exercise Title": "Exercise Title:",
+    "Load (in kg)": "Set:",
+    "Number of Reps": "Reps:",
+    "Add Workout": "Add Workout",
+    "You must be logged in.": "You must be logged in.",
+    "logOut":"Log out"
+
+      
+      
+  }
