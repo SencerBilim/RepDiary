@@ -1,37 +1,33 @@
+require("dotenv").config();
+const express = require("express");
+const workoutRoutes = require("./routes/workout");
+const userRoutes = require("./routes/user");
+const mongoose = require("mongoose");
 
-require("dotenv").config()
-const express = require("express")
-const workoutRoutes = require("./routes/workout")
-const userRoutes = require("./routes/user")
-const mongoose = require("mongoose")
+// Express app
+const app = express();
 
-
-//express app
-const app = express()
-
-//middleware
-app.use(express.json())
+// Middleware
+app.use(express.json());
 
 app.use((req, res, next) => {
-    console.log(req.path, req.method)
+    console.log(req.path, req.method);
     next();
-})
+});
 
-//routes
-app.use("/api/workouts", workoutRoutes)
-app.use("/api/user", userRoutes)
+// Routes
+app.use("/api/workouts", workoutRoutes);
+app.use("/api/user", userRoutes);
 
-
-
-//connect to db
+// Connect to DB
 mongoose.connect(process.env.MONG_URI)
     .then(() => {
-     //listen for requests
-    app.listen(process.env.PORT, () => {
-        console.log("connected to db & listening on port", process.env.PORT)
-    })
+        // Listen for requests
+        const PORT = process.env.PORT || 4000; // Use the environment PORT, or 4000 for local development
+        app.listen(PORT, '0.0.0.0', () => {
+            console.log(`Connected to DB & listening on port ${PORT}`);
+        });
     })
     .catch((error) => {
-        console.log(error)
-    })
-
+        console.log(error);
+    });
