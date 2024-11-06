@@ -1,4 +1,7 @@
-const dotenv = require("dotenv").config();
+// Import environment variables
+require("dotenv").config();
+
+// Import packages
 const express = require("express");
 const cors = require("cors");
 const workoutRoutes = require("./routes/workout");
@@ -7,14 +10,15 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-// Middleware
+// Middleware to parse JSON
 app.use(express.json());
 
 // CORS Middleware to allow requests from your frontend
 const corsOptions = {
-    origin: "https://repdiary-hfsw.onrender.com/", // Replace with your actual frontend URL
+    origin: "https://repdiary-hfsw.onrender.com", // Replace with your actual frontend URL
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization",
+    credentials: true, // Allow credentials if you're using cookies or tokens
 };
 
 // Apply CORS middleware
@@ -26,19 +30,18 @@ app.use((req, res, next) => {
     next();
 });
 
-// Routes
+// Routes for workouts and users
 app.use("/api/workouts", workoutRoutes);
 app.use("/api/user", userRoutes);
 
-// Connect to DB
+// Connect to MongoDB
 mongoose.connect(process.env.MONG_URI)
     .then(() => {
-        // Listen for requests
-        const PORT = process.env.PORT || 4000; // Use the environment PORT, or 4000 for local development
+        const PORT = process.env.PORT || 4000; // Use the environment PORT or 4000 for local development
         app.listen(PORT, '0.0.0.0', () => {
             console.log(`Connected to DB & listening on port ${PORT}`);
         });
     })
     .catch((error) => {
-        console.log(error);
+        console.error("Database connection error:", error);
     });
