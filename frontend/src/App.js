@@ -6,7 +6,7 @@ import Login from "./pages/Login.js";
 import Signup from "./pages/Signup.js";
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer.js";
-import LanguageSwitcher from "./components/LanguageSwitcher"
+
 
 function App() {
   const { user } = useAuthContext();

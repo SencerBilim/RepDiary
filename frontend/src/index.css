@@ -455,12 +455,15 @@ nav button {
     
   }
   header .container {
-    margin: 0 auto;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+      display: flex;
+      margin: 0 auto;
+      padding: 10px;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
   } 
 
   .hero-section {
@@ -494,10 +497,7 @@ nav button {
   display: contents;
   margin: 13px;
 }
-nav {
-justify-content: space-around;
-gap: 6px;
-}
+
 }
 
 
