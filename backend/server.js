@@ -1,15 +1,26 @@
-require("dotenv").config();
+const dotenv = require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const workoutRoutes = require("./routes/workout");
 const userRoutes = require("./routes/user");
 const mongoose = require("mongoose");
 
-// Express app
 const app = express();
 
 // Middleware
 app.use(express.json());
 
+// CORS Middleware to allow requests from your frontend
+const corsOptions = {
+    origin: "https://repdiary-hfsw.onrender.com/", // Replace with your actual frontend URL
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+};
+
+// Apply CORS middleware
+app.use(cors(corsOptions));
+
+// Logger middleware (optional)
 app.use((req, res, next) => {
     console.log(req.path, req.method);
     next();
