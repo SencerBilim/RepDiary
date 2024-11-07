@@ -582,7 +582,9 @@ form.signup, form.login {
   header .container {
     padding: 10px 4%;
   }
-
+  nav span {
+    display: none;
+  }
   header a h1 {
     color: #ffffff;
     text-decoration: none;
