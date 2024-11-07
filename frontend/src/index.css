@@ -462,7 +462,8 @@ nav button {
       align-items: center;
   } 
   nav {
-    font-size: 0.9em; /* Smaller font size for nav links */
+    gap: 3px;
+    font-size: .7em;
   }
 
   .hero-section {
@@ -491,6 +492,7 @@ nav button {
 }
 .language-switcher button{
   margin: 3px;
+  font-size: .9em;
 }
 .nav-buttons {
   display: contents;
