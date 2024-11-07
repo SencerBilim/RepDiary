@@ -462,7 +462,7 @@ nav button {
       align-items: center;
   } 
   nav {
-    gap: 3px;
+    gap: 6px;
     font-size: .7em;
   }
 
@@ -546,7 +546,7 @@ form.signup, form.login {
   }
 
   nav {
-    font-size: 0.9em; /* Smaller font size for nav links */
+    font-size: 0.7em; /* Smaller font size for nav links */
   }
 
   .nav-buttons {
@@ -576,6 +576,9 @@ form.signup, form.login {
 }
   nav {
     font-size: 0.6rem;
+  }
+  header {
+    height: 60px;
   }
 }
 
