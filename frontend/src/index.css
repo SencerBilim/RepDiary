@@ -19,11 +19,11 @@ body {
   margin: 0;
   font-family: "Poppins", Arial, sans-serif;
   min-height: 100vh;
-  background-image: url("../public/images/home1.png"); /* Set the background image here */
-  background-size: cover; /* Cover the entire viewport */
-  background-position: center; /* Center the background */
-  background-repeat: no-repeat; /* Prevent background repeat */
-  background-attachment: fixed; /* Fixed attachment */
+  background-image: url("../public/images/home1.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
 }
 
 header {
@@ -66,7 +66,7 @@ header a {
 .home {
   min-height: calc(100vh - 60px);
   width: 100%;
-  position: relative; /* Add this */
+  position: relative; 
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -74,7 +74,7 @@ header a {
   margin: -20px auto 0;
 }
 
-/* The following block is removed since we're setting the background on body */
+
 .home::before {
   content: '';
   position: fixed;
@@ -87,7 +87,7 @@ header a {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  z-index: -2; /* Place it behind all content */
+  z-index: -2; 
 }
 
 .workout-details {
@@ -375,15 +375,15 @@ select.error {
 
 
 .login h3 {
-  margin-bottom: 20px; /* Space below the heading */
+  margin-bottom: 20px; 
 }
 
 .signup {
-  background: #fff; /* White background for the login form */
-  border-radius: 4px; /* Rounded corners */
-  padding: 20px; /* Padding inside the form */
-  box-shadow: 0 2px 5px rgba(223, 219, 219, 0.3); /* Optional shadow for depth */
-  color: white; /* Adjusted to black for better readability */
+  background: #fff; 
+  border-radius: 4px;
+  padding: 20px; 
+  box-shadow: 0 2px 5px rgba(223, 219, 219, 0.3); 
+  color: white; 
 }
 
 /* foooter */
@@ -443,7 +443,7 @@ nav button {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .login-page {
-    grid-template-columns: 1fr; /* Stack hero and login vertically */
+    grid-template-columns: 1fr; 
   
    
     padding: 20px;
@@ -542,24 +542,24 @@ form.signup, form.login {
   }
   
   header {
-    height: 80px; /* Adjust header height */
+    height: 80px;
   }
 
   nav {
-    font-size: 0.7em; /* Smaller font size for nav links */
+    font-size: 0.7em; 
   }
 
   .nav-buttons {
-    margin-right: 20px; /* Less margin for smaller screens */
+    margin-right: 20px; 
   }
 
   nav a {
-    margin-left: 5px; /* Reduce spacing between links */
+    margin-left: 5px; 
   }
 
   nav button {
-    padding: 2px 8px; /* Smaller button padding */
-    font-size: 0.9em; /* Reduce font size */
+    padding: 2px 8px; 
+    font-size: 0.9em; 
     margin-right: 10px;
   }
 }
